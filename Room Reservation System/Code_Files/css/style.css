@@ -1,0 +1,234 @@
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+html,body{
+	overflow-x: hidden;
+}
+body{
+    position: relative;
+    margin: 0;
+    padding-bottom: 20rem;
+    min-height: 100%;
+}
+header{
+
+}
+footer{
+    position: absolute;
+	background: #4d4438; 
+    width: 100%;
+    background-size: 100% 100%;
+    bottom: 0;
+}
+.headerImage{
+	padding: 15px 0;
+}
+.header-heading{
+	color: #e8e0c6;
+	padding: 45px 65px 30px 110px;
+}
+.headerImage>img{
+	margin: 0 auto;
+}
+.navbar-default {
+    background-color: #706652;
+    border-color: #706652;
+}  
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    color: #e8e0c6;
+    background-color: #706652;
+    border: 1px solid #e8e0c6;
+}
+.nav-pills>li>a {
+    color: #e8e0c6;
+    background-color: #706652;
+    border: 1px solid transparent;
+}
+.nav>li>a:focus, .nav>li>a:hover {
+    color: #e8e0c6;
+    background-color: #706652;
+    border: 1px solid #e8e0c6;
+}
+.navbar {
+    padding-top: 10px;
+    margin-bottom: 0;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    color: #e8e0c6;
+    background-color: #706652;
+    border: 1px solid #e8e0c6;
+}
+.nav-tabs>li>a {
+    border-bottom: 1px solid #706652;
+    color: #706652;
+}
+.nav:after, .navbar-collapse:after, .navbar-header:after, .navbar:after {
+    clear: right;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #e8e0c6;
+    border-radius: 4px;
+    border: 1px solid transparent;
+}
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: #e8e0c6;
+    background-color: transparent;
+    border: 1px solid #e8e0c6;
+}
+.navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.submitBtn,.submitBtn:hover {
+	background: #8dd877;
+}
+.inputField{
+	background-color: #706652;
+    color: #7dd780;
+}
+.login-form,.reg-form{
+	padding-top: 15px;
+}
+.container .login-form{
+    padding: 55px 0;
+}
+.modal-content{
+	background: #e1d6ba;
+}
+footer span{
+	color: #8dd877;
+}
+footer h4{
+	color: #fff;
+}
+footer img{
+	width: 45px;
+    margin-left: 15px;
+}
+footer .row .container span{
+    color: #8dd877;
+    display: block;
+}
+footer .row .container span a {
+    text-decoration: none;
+    color: #8dd877;
+}
+.addSnippetReq{
+	color: #706652;
+}
+.addSnippetmodalheader{
+
+}
+.panelHeader{
+    margin-top: -7px;
+}
+
+span.lastDate{
+    font-size: 12px;
+    padding-left: 10px;
+    color: gray;
+}
+#basic-addon2{
+    cursor: pointer;
+}
+#searchSnippets{
+    padding:15px 0;
+}
+.deleteSnippet,.editSnippet{
+    margin-right: 5px;
+}
+#home img{
+    width: 150px;
+}
+#home >div{
+    padding-bottom: 50px;
+}
+.promotevisitor{
+    margin-top: -5px;
+}
+footer .container{
+    padding: 25px;
+}
+.CopyRight{
+    padding: 15px;    
+    border-top: 1px solid #fff;
+}
+.CopyRight>span.pull-right{
+    text-align: right;
+}
+.navbar-default .navbar-brand {
+    color: #e8e0c6;
+}
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
+    color: #fff;
+    background-color: transparent;
+}
+.navbar {
+    border-radius: 0px;
+}
+@media (max-width: 767px) {
+    .nav-pills>li {
+        float: none;
+        margin-top: 5px;
+    }
+}
+.hideForgot{
+    display: block;
+}
+.showForgot,.updatePasswordBlock{
+    display: none;
+}
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+    color: #000;
+}
+.card {
+    box-shadow: 0 2px 8px 1px rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 30%;
+    margin: 10px;
+    display: inline-flex;
+    float: none;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card-block {
+    padding: 15px;
+}
+.col-xs-12.roomsList {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.col-md-4.memberList {
+    box-shadow: 0 2px 8px 1px rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 30%;
+    margin: 10px 20px 0 0;
+    display: inline-block;
+    float: none;
+    padding: 10px 15px;
+}
+.memberBlock {
+    padding: 20px 0px 0;
+}
+.col-md-12.queriesList {
+    box-shadow: 0 2px 8px 1px rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin: 10px 20px 0 0;
+    display: inline-block;
+    float: none;
+    padding: 20px 40px;
+}
+.addRoomBlock {
+    text-align: center;
+    margin: 10px 0 30px;
+}

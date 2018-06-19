@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UB Reseravation</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    
+  </head>
+  <body>
+    <!-- loginModal -->
+    <div class="modal fade" id="loginModal" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">UB Reseravation</h4>
+          </div>
+          <div class="modal-body">
+            <ul class="nav nav-tabs nav-justified">
+              <li class="active"><a data-toggle="tab" href="#login">LOGIN</a></li>
+              <li><a data-toggle="tab" href="#register">REGISTER</a></li>
+            </ul>
+              <div class="tab-content">
+                <div id="login" class="login-form tab-pane fade in active">
+                   <div class="form-group">
+                      <label class="control-label" for="username">Username:</label>
+                      <input type="text" name="username" class="form-control inputValidation inputField" placeholder="Enter Username">
+                    </div>
+                    <div class="form-group hideForgot">
+                      <label class="control-label" for="password">Password:</label>
+                      <input type="password" name="password" class="form-control inputValidation inputField" placeholder="Password">
+                    </div>
+                    <a href="#" class="link forgotPassword hideForgot">Forgot Password?</a>
+                    <input type="button" class="btn submitBtn hideForgot" id="login-form" value="Login">
+                    <div class="form-group showForgot">
+                      <label class="control-label">Select Security Question:</label>
+                      <select class="form-control que inputValidation inputField" placeholder="Select Security Question">                        
+                      </select>
+                    </div>
+                    <div class="form-group showForgot">
+                      <label class="control-label">Answer for Security Question:</label>
+                      <input type="text" class="form-control ans inputValidation inputField" placeholder="Enter Answer">
+                    </div>
+                    <div class="form-group showForgot">
+                      <label class="control-label" for="password">New Password:</label>
+                      <input type="password" name="passwordNew" class="form-control inputValidation inputField" placeholder="New Password">
+                    </div>
+                    <input type="button" class="btn submit-forgot showForgot" value="Submit"> <input type="button" class="btn backtoLogin showForgot" value="Back">
+                </div>
+                <div id="register" class="login-form tab-pane fade">
+                  <form>
+                    <div class="form-group">
+                      <label class="control-label">Username:</label>
+                      <input type="text" name="usernamereg" class="form-control inputValidation inputField" placeholder="Enter Username">
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label">Password:</label>
+                      <input type="password" name="passwordreg" class="form-control inputValidation inputField" placeholder="Enter Password">
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label">First Name:</label>
+                      <input type="text" name="fname" class="form-control inputValidation inputField" placeholder="Enter First Name">
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label">Last Name:</label>
+                      <input type="text" name="lname" class="form-control inputValidation inputField" placeholder="Enter Last Name">
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label">Date of Birth:</label>
+                      <input type="date" name="dob" class="form-control inputValidation inputField" placeholder="Enter Date of Birth">
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label">Gender:</label>
+                      <label class="radio-inline">
+                        <input type="radio" name="gender" value="male">Male
+                      </label>
+                      <label class="radio-inline">
+                        <input type="radio" name="gender" value="female">Female
+                      </label>
+                      <label class="radio-inline">
+                        <input type="radio" name="gender" value="other">Other
+                      </label>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label">Contact:</label>
+                      <input type="number" name="contact" class="form-control inputValidation inputField" placeholder="Enter Contact">
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label">Select Department:</label>
+                      <select class="form-control inputValidation inputField" name="dept" placeholder="Select Department">                        
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label">Select Semester:</label>
+                      <select class="form-control inputValidation inputField" name="sem" placeholder="Select Semester">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>                        
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label">Select Origin Location:</label>
+                      <select class="form-control inputValidation inputField" name="loc" placeholder="Select Location">                        
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label">Select Security Question:</label>
+                      <select class="form-control inputValidation inputField" name="que" placeholder="Select Security Question">                        
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label">Answer for Security Question:</label>
+                      <input type="text" name="ans" class="form-control inputValidation inputField" placeholder="Enter Answer">
+                    </div>
+                    <input type="button" class="btn submitBtn" id="register-form" value="SUBMIT">
+                  </form>
+                </div>
+              </div>
+          </div>
+          <div class="modal-footer">
+          </div>
+        </div>      
+      </div>
+    </div>
+
+  <header style="display: none;">
+    <div class="row">
+      <div class="col-sm-12 menu">
+      <nav class="navbar col-sm-12 navbar-default">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+          <a class="navbar-brand" href="#">UB Reseravation</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav nav-pills">
+            <li class="active"><a data-toggle="pill" href="#home">Dashbord</a></li>
+            <li><a data-toggle="pill" href="#rooms">Rooms</a></li>
+            <li class=""><a data-toggle="pill" href="#Queries">Queries</a></li>
+            <!-- $('.nav-pills').append(''); -->
+          <!-- $('.tab-content').append(''); -->
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="login"><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    </div>
+  </header>
+  <div class="container" style="display: none;">
+    <div class="tab-content">
+      <div id="home" class="login-form tab-pane fade in active">
+        <form>
+          <h3>Profile Details</h3>
+          <div class="form-group">
+            <label class="control-label">Username:</label>
+            <input type="text" name="updateusername" readonly="" class="form-control inputValidation inputField" placeholder="Enter Username">
+          </div>
+          <div class="form-group">
+            <label class="control-label">First Name:</label>
+            <input type="text" name="updatefname" class="form-control inputValidation inputField" placeholder="Enter First Name">
+          </div>
+          <div class="form-group">
+            <label class="control-label">Last Name:</label>
+            <input type="text" name="updatelname" class="form-control inputValidation inputField" placeholder="Enter Last Name">
+          </div>
+          <div class="form-group">
+            <label class="control-label">Date of Birth:</label>
+            <input type="date" name="updatedob" class="form-control inputValidation inputField" placeholder="Enter Date of Birth">
+          </div>
+          <div class="form-group">
+            <label class="control-label">Gender:</label>
+            <label class="radio-inline">
+              <input type="radio" name="updategender" value="male">Male
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="updategender" value="female">Female
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="updategender" value="other">Other
+            </label>
+          </div>
+          <div class="form-group">
+            <label class="control-label">Contact:</label>
+            <input type="number" name="updatecontact" class="form-control inputValidation inputField" placeholder="Enter Contact">
+          </div>
+          <div class="form-group">
+            <label class="control-label">Select Department:</label>
+            <select class="form-control inputValidation inputField" name="updatedept" placeholder="Select Department">                        
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="control-label">Select Semester:</label>
+            <select class="form-control inputValidation inputField" name="updatesem" placeholder="Select Semester">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>                        
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="control-label">Select Origin Location:</label>
+            <select class="form-control inputValidation inputField" name="updateloc" placeholder="Select Location">                        
+            </select>
+          </div>
+          <div class="form-group">
+            <div class="">
+              <input type="hidden" class="myRoomID" value="">
+              <button type="button" class="btn btn-default updateProfile">Update Details</button>
+              <button type="button" class="btn btn-default changePassword">Update Password</button>
+            </div>
+          </div>
+        </form>
+        <div class="updatePasswordBlock">
+          <h3>Update Profile Password</h3>
+          <div class="form-group">
+            <label class="control-label">Old Password:</label>
+            <input type="password" class="form-control oldpass inputField" placeholder="Enter Old Password">
+          </div>
+          <div class="form-group">
+            <label class="control-label">New Password:</label>
+            <input type="password" class="form-control newpass inputField" placeholder="Enter New Password">
+          </div>
+          <div class="form-group">
+            <label class="control-label">Confirm:</label>
+            <input type="password" class="form-control conpass inputField" placeholder="Enter Confirm Password">
+          </div>
+          <div class="form-group">
+              <button type="button" class="btn btn-default updatePassword">Update Password</button>
+              <button type="button" class="btn btn-default backtoProfile">Back</button>
+          </div>
+        </div>
+      </div>
+      <div id="rooms" class="login-form tab-pane fade">
+        <div class="row">
+          <h3 class="pull-left">Rooms List</h3>
+          <button type="button" class="btn btn-primary pull-right addRoom">Add Room</button>
+          <div class="col-xs-12 addRooms">
+            <div class="addRoomBlock" style="display: none;">
+              <form class="form-inline">
+                <div class="form-group">
+                  <label class="control-label">Room Number:</label>
+                  <input type="number" name="" class="form-control roomno" placeholder="Enter Room Number">
+                </div>
+                <div class="form-group">
+                  <label class="control-label">Floor Number:</label>
+                  <input type="number" name="" class="form-control floorno" placeholder="Enter Floor Number">
+                </div>
+                <div class="form-group">
+                  <label class="control-label">Occupancy:</label>
+                  <input type="number" name="" class="form-control occupancy" placeholder="Enter Occupancy">
+                </div>
+                <div class="form-group">
+                  <button type="button" class="btn btn-primary submitRoom">Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-xs-12 roomsList">
+          </div>                    
+        </div>
+        <div class="roomDetails">
+        </div>
+      </div>
+      <div id="Queries" class="login-form tab-pane fade">
+        
+      </div>
+    </div>
+  </div>
+  <footer style="display: none;">
+    <div class="row">
+      <div class="col-xs-12 CopyRight">
+        <span class="col-sm-12 col-xs-12">CopyRight © 2017 UB Reseravation</span>
+      </div>
+    </div>
+  </footer>
+  </body>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+</html>
